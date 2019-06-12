@@ -24,9 +24,14 @@ namespace CSharpIntermediate
             //var person = new Person(new DateTime(1982, 7, 1));
             //Console.WriteLine(person.Age);
 
-            var cookie = new HttpCookie();
-            cookie["name"] = "Matt";
-            Console.WriteLine(cookie["name"]);
+            //var cookie = new HttpCookie();
+            //cookie["name"] = "Matt";
+            //Console.WriteLine(cookie["name"]);
+
+            var stopWatch = new Stopwatch();
+            stopWatch.Start();
+            stopWatch.Stop();
+
 
             Console.ReadLine();
         }
