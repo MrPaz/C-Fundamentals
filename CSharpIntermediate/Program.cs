@@ -28,10 +28,20 @@ namespace CSharpIntermediate
             //cookie["name"] = "Matt";
             //Console.WriteLine(cookie["name"]);
 
-            var stopWatch = new Stopwatch();
-            stopWatch.Start();
-            stopWatch.Stop();
+            //var stopWatch = new Stopwatch();
+            //stopWatch.Start();
+            //stopWatch.Stop();
 
+            string title = "C# is a good language to learn";
+            string description = "C# and Microsoft's extensive .NET Framework allows you to build great applications!";
+            var post = new Post(title, description);
+            post.UpVote();
+            post.UpVote();
+            post.DisplayPost(); // should have +2 votes
+            post.DownVote();
+            post.DownVote();
+            post.DownVote();
+            post.DisplayPost(); // should have -1 votes
 
             Console.ReadLine();
         }
