@@ -32,16 +32,24 @@ namespace CSharpIntermediate
             //stopWatch.Start();
             //stopWatch.Stop();
 
-            string title = "C# is a good language to learn";
-            string description = "C# and Microsoft's extensive .NET Framework allows you to build great applications!";
-            var post = new Post(title, description);
-            post.UpVote();
-            post.UpVote();
-            post.DisplayPost(); // should have +2 votes
-            post.DownVote();
-            post.DownVote();
-            post.DownVote();
-            post.DisplayPost(); // should have -1 votes
+            //string title = "C# is a good language to learn";
+            //string description = "C# and Microsoft's extensive .NET Framework allows you to build great applications!";
+            //var post = new Post(title, description);
+            //post.UpVote();
+            //post.UpVote();
+            //post.DisplayPost(); // should have +2 votes
+            //post.DownVote();
+            //post.DownVote();
+            //post.DownVote();
+            //post.DisplayPost(); // should have -1 votes
+
+            var stack = new Stack();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
 
             Console.ReadLine();
         }
