@@ -43,13 +43,18 @@ namespace CSharpIntermediate
             //post.DownVote();
             //post.DisplayPost(); // should have -1 votes
 
-            var stack = new Stack();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
+            //var stack = new Stack();
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Pop());
+
+            var connectionString = "domoarigotomrroboto";
+            //var command = new DbCommand(new SqlConnection(connectionString), "Command in action");
+            var command = new DbCommand(new OracleConnection(connectionString), "Command in action");
+            command.Execute();
 
             Console.ReadLine();
         }
