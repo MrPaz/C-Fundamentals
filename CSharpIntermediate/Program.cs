@@ -51,10 +51,16 @@ namespace CSharpIntermediate
             //Console.WriteLine(stack.Pop());
             //Console.WriteLine(stack.Pop());
 
-            var connectionString = "domoarigotomrroboto";
-            //var command = new DbCommand(new SqlConnection(connectionString), "Command in action");
-            var command = new DbCommand(new OracleConnection(connectionString), "Command in action");
-            command.Execute();
+            //var connectionString = "domoarigotomrroboto";
+            ////var command = new DbCommand(new SqlConnection(connectionString), "Command in action");
+            //var command = new DbCommand(new OracleConnection(connectionString), "Command in action");
+            //command.Execute();
+
+            var workflow = new Workflow();
+            workflow.Add(new UploadVideo());
+            workflow.Add(new CallWebService());
+            var workflowEngine = new WorkflowEngine();
+            workflowEngine.Run(workflow);
 
             Console.ReadLine();
         }

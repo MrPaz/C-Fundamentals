@@ -42,10 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="CallWebService.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="DbCommand.cs" />
     <Compile Include="DbConnection.cs" />
     <Compile Include="HttpCookie.cs" />
+    <Compile Include="IWorkflow.cs" />
+    <Compile Include="IWorkflowStep.cs" />
     <Compile Include="OracleConnection.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Person.cs" />
@@ -56,6 +59,9 @@
     <Compile Include="SqlConnection.cs" />
     <Compile Include="Stack.cs" />
     <Compile Include="Stopwatch.cs" />
+    <Compile Include="UploadVideo.cs" />
+    <Compile Include="WorkflowEngine.cs" />
+    <Compile Include="Workflow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
