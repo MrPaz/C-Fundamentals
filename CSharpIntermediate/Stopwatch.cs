@@ -32,7 +32,7 @@ using System.Threading.Tasks;
             _timeElapsed = TimeSpan.Zero;
         }
 
-        public void Start()
+        private void Start()
         {
             if (_running)
                 throw new InvalidOperationException("The stopwatch is already running.");
@@ -44,7 +44,7 @@ using System.Threading.Tasks;
             Console.WriteLine("Stopwatch started.\n");
         }
 
-        public void Stop()
+        private void Stop()
         {
             if (!_running)
                 throw new InvalidOperationException("The stopwatch is not running.");
@@ -58,6 +58,22 @@ using System.Threading.Tasks;
             _timeElapsed = _endTime - _startTime;
 
             Console.WriteLine("Time Elapsed: " + _timeElapsed);
+        }
+
+        public void UseStopwatch()
+        {
+            Start();
+            Stop();
+
+            Console.WriteLine("Reset and start again? Press Y or N.\n");
+            var input = Console.ReadKey();
+            if (input.Key == ConsoleKey.Y)
+                UseStopwatch();
+            else if (input.Key == ConsoleKey.N)
+                return;
+            else
+                Console.WriteLine("Press Y to reset and start again, or N to quit.\n");
+
         }
     }
 }

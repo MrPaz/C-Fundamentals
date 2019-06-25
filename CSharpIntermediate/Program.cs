@@ -28,9 +28,8 @@ namespace CSharpIntermediate
             //cookie["name"] = "Matt";
             //Console.WriteLine(cookie["name"]);
 
-            //var stopWatch = new Stopwatch();
-            //stopWatch.Start();
-            //stopWatch.Stop();
+            var stopWatch = new Stopwatch();
+            stopWatch.UseStopwatch();
 
             //string title = "C# is a good language to learn";
             //string description = "C# and Microsoft's extensive .NET Framework allows you to build great applications!";
@@ -56,11 +55,11 @@ namespace CSharpIntermediate
             //var command = new DbCommand(new OracleConnection(connectionString), "Command in action");
             //command.Execute();
 
-            var workflow = new Workflow();
-            workflow.Add(new UploadVideo());
-            workflow.Add(new CallWebService());
-            var workflowEngine = new WorkflowEngine();
-            workflowEngine.Run(workflow);
+            //var workflow = new Workflow();
+            //workflow.Add(new UploadVideo());
+            //workflow.Add(new CallWebService());
+            //var workflowEngine = new WorkflowEngine();
+            //workflowEngine.Run(workflow);
 
             Console.ReadLine();
         }

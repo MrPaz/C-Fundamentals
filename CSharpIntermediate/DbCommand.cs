@@ -4,18 +4,15 @@ namespace CSharpIntermediate
 {
     public class DbCommand
     {
-        DbConnection _dbConnection;
-        string _command;
+        readonly DbConnection _dbConnection;
+        readonly string _command;
 
         public DbCommand(DbConnection dbConnection, string command)
         {
-            if (dbConnection == null)
-                throw new InvalidOperationException("You must be connected to a database.");
-
             if (string.IsNullOrWhiteSpace(command))
                 throw new InvalidOperationException("You must give a command.");
 
-            _dbConnection = dbConnection;
+            _dbConnection = dbConnection ?? throw new InvalidOperationException("You must be connected to a database.");
 
             _command = command;
         }
